@@ -1,4 +1,4 @@
-# Email Validation
+# Domain & Email Validation
 
 ```php
 <?php
@@ -13,4 +13,4 @@ var_dump($isValid);
 ```
 
 
-Email validate with [http://validator.pizza/](http://validator.pizza/)
+Domain & Email validate with [http://validator.pizza/](http://validator.pizza/)

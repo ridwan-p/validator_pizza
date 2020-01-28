@@ -14,7 +14,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "ValidatorPizza\\Http\\": "src/"
+            "ValidatorPizza\\": "src/"
         }
     }
 }

@@ -1,0 +1,20 @@
+{
+    "name": "ridwan/client",
+    "description": "curl client",
+    "keywords": [
+        "curl",
+        "http"
+    ],
+    "authors": [
+        {
+            "name": "Ridwan Pamungkas",
+            "email": "ridwan.pamungks@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "ValidatorPizza\\Http\\": "src/"
+        }
+    }
+}

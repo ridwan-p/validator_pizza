@@ -59,8 +59,7 @@ class Client extends HttpCurl
 
 		curl_setopt($this->curl, CURLOPT_URL, $this->url);
 
-		return $this->exec()
-			->getResponse();
+		return $this->exec();
 	}
 
 	public function exec()
@@ -73,7 +72,7 @@ class Client extends HttpCurl
             curl_close($this->curl);
         }
 
-        if (0 !== $this->errno) {
+        if (!empty($this->errno)) {
             throw new RuntimeException($error, $errno);
         }
 

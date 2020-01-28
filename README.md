@@ -1,4 +1,16 @@
-# validator_pizza
+# Email Validation
+
+```php
+<?php
+require __DIR__ . '/vendor/autoload.php';
+
+use ValidatorPizza\Validator\Validator;
+
+$valid = new Validator();
+$isValid = $valid->email("ridwan.pamungks@gmail.com");
+
+var_dump($isValid);
+```
 
 
-thanks [http://validator.pizza/](http://validator.pizza/)
+Email validate with [http://validator.pizza/](http://validator.pizza/)

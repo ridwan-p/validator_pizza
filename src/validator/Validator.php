@@ -1,6 +1,7 @@
 <?php
 namespace ValidatorPizza\Validator;
 
+use RuntimeException;
 use ValidatorPizza\Http\Client;
 
 /**
@@ -22,8 +23,26 @@ class Validator
 
 	public function validate($name, $value)
 	{
-		$req = Client::get("{$this->url}/{$name}/{$value}");
+		try {
+			$req = Client::get("{$this->url}/{$name}/{$value}");
+			return $this->check($req);
+		} catch (RuntimeException $e) {
+			return false;
+		}
+	}
 
-		return $req;
+	public function check($request)
+	{
+		$body = json_decode($request->getResponse());
+		switch ($body) {
+            case $body->status == 400:
+                return false;
+            case !$body->mx:
+                return false;
+            case $body->disposable:
+                return false;
+            default:
+                return true;
+        }
 	}
 }

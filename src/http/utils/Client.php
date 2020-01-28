@@ -79,7 +79,7 @@ class Client extends HttpCurl
         return $this;
 	}
 
-	protected function setOptionCurl(array $options)
+	protected function setOptionsCurl(array $options)
 	{
 		foreach ($options as $key => $val) {
             curl_setopt($this->curl, $key, $val);

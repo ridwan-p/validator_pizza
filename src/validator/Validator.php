@@ -22,7 +22,7 @@ class Validator
 
 	public function validate($name, $value)
 	{
-		$req = Client::get("{$this->url}/{$name}/{$domain}");
+		$req = Client::get("{$this->url}/{$name}/{$value}");
 
 		return $req;
 	}

@@ -1,5 +1,5 @@
 <?php
-namespace ValidatorPizza\Http;
+namespace ValidatorPizza\Http\Utils;
 
 /**
  * HttpCurl

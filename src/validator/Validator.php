@@ -12,14 +12,17 @@ class Validator
 
 	public function email($email)
 	{
-		$req = Client::get("{$this->url}/email/{$email}");
-
-		return $req;
+		return $this->validate('email', $email);
 	}
 
 	public function domain($domain)
 	{
-		$req = Client::get("{$this->url}/domain/{$domain}");
+		return $this->validate('domain', $domain);
+	}
+
+	public function validate($name, $value)
+	{
+		$req = Client::get("{$this->url}/{$name}/{$domain}");
 
 		return $req;
 	}

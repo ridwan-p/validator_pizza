@@ -6,10 +6,9 @@ require __DIR__ . '/vendor/autoload.php';
 
 use ValidatorPizza\Validator\Validator;
 
-$valid = new Validator();
-$isValid = $valid->email("ridwan.pamungks@gmail.com");
+$validator = new Validator();
 
-var_dump($isValid);
+var_dump($validator->email("ridwan.pamungks@gmail.com"));
 ```
 
 
